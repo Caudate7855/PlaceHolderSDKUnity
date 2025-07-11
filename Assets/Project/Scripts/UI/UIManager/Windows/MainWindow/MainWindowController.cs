@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using UI.Abstracts;
 using UI.Attributes;
+using UI.UIManager;
 using UnityEngine.UI;
 
 namespace UI
@@ -9,14 +10,20 @@ namespace UI
     public class MainWindowController : UIControllerBase<MainWindowView>
     {
         private Button _getPostsButton;
-        private Button _addPostButton;
+        private Button _createPostButton;
         private Button _editPostButton;
         private Button _deletePostButton;
-        
+
+        private IUIManager _uiManager = new UIManager.UIManager();
+
+        private CreatePostModalWindowController _createPostModalWindowController;
+        private EditPostModalWindowController _editPostModalWindowController;
+        private DeletePostModalWindowController _deletePostModalWindowController;
+
         protected override void Initialize()
         {
             _getPostsButton = View.GetPostsButton;
-            _addPostButton = View.AddPostButton;
+            _createPostButton = View.CreatePostButton;
             _editPostButton = View.EditPostButton;
             _deletePostButton = View.DeletePostButton;
 
@@ -26,7 +33,7 @@ namespace UI
         private void SubscribeButtons()
         {
             _getPostsButton.onClick.AddListener(OnGetPostsButtonClick);
-            _addPostButton.onClick.AddListener(OnAddPostButtonClick);
+            _createPostButton.onClick.AddListener(OnCreatePostButtonClick);
             _editPostButton.onClick.AddListener(OnEditPostButtonClick);
             _deletePostButton.onClick.AddListener(OnDeletePostButtonClick);
         }
@@ -36,19 +43,22 @@ namespace UI
             
         }
 
-        private void OnAddPostButtonClick()
+        private void OnCreatePostButtonClick()
         {
-            
+            _createPostModalWindowController = _uiManager.Load<CreatePostModalWindowController>();
+            _createPostModalWindowController.Open();
         }
 
         private void OnEditPostButtonClick()
         {
-            
+            _editPostModalWindowController = _uiManager.Load<EditPostModalWindowController>();
+            _createPostModalWindowController.Open();
         }
 
         private void OnDeletePostButtonClick()
         {
-            
+            _deletePostModalWindowController = _uiManager.Load<DeletePostModalWindowController>();
+            _createPostModalWindowController.Open();
         }
     }
 }

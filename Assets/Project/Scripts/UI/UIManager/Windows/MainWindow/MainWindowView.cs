@@ -1,5 +1,6 @@
 using UI.Abstracts;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI
@@ -7,13 +8,13 @@ namespace UI
     public class MainWindowView : UIViewBase
     {
         public Button GetPostsButton => _getPostsButton;
-        public Button AddPostButton => _addPostButton;
+        public Button CreatePostButton => createPostButton;
         public Button EditPostButton => _editPostButton;
         public Button DeletePostButton => _deletePostButton;
         
         
         [SerializeField] private Button _getPostsButton;
-        [SerializeField] private Button _addPostButton;
+        [FormerlySerializedAs("_addPostButton")] [SerializeField] private Button createPostButton;
         [SerializeField] private Button _editPostButton;
         [SerializeField] private Button _deletePostButton;
     }

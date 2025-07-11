@@ -22,6 +22,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef58dfe46428ce24f91d9be330cec28e
+    m_Address: UI/CreatePostModalWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ba2dcbcd49ae46e48a66fd9510e5be75, type: 2}
   m_SchemaSet:
