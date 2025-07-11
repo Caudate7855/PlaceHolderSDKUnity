@@ -10,6 +10,7 @@ namespace UI
     [AssetAddress("UI/CreatePostModalWindow"), UsedImplicitly]
     public class CreatePostModalWindowController : UIControllerBase<CreatePostModalWindowView>
     {
+        private ResultMessage _resultMessage;
         private Button _cancelButton;
         private Button _acceptButton;
 
@@ -17,6 +18,7 @@ namespace UI
         
         protected override void Initialize()
         {
+            _resultMessage = View.ResultMessage;
             _cancelButton = View.CancelButton;
             _acceptButton = View.AcceptButton;
         }
@@ -31,6 +33,8 @@ namespace UI
         {
             _cancelButton.onClick.RemoveListener(Cancel);
             _acceptButton.onClick.RemoveListener(Send);
+            
+            _resultMessage.HideMessage();
         }
         
         private void Send()
@@ -43,6 +47,7 @@ namespace UI
             };
             
             _client.CreatePost(post);
+            _resultMessage.ShowSuccess();
         }
 
         private void Cancel()
