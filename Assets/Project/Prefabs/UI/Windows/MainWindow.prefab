@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _getPostsButton: {fileID: 3296349813385455971}
-  _addPostButton: {fileID: 8539752980190285930}
+  _createPostButton: {fileID: 8539752980190285930}
   _editPostButton: {fileID: 5462657968585012474}
   _deletePostButton: {fileID: 1902007925128810348}
 --- !u!1001 &293532642629094456
@@ -205,15 +205,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 23522962876862414, guid: d380af8a853396b4199315ade0879922, type: 3}
       propertyPath: m_text
-      value: Add Post
+      value: Create Post
       objectReference: {fileID: 0}
     - target: {fileID: 23522962876862414, guid: d380af8a853396b4199315ade0879922, type: 3}
       propertyPath: m_fontSize
-      value: 43.95
+      value: 33.35
       objectReference: {fileID: 0}
     - target: {fileID: 3547299248854205569, guid: d380af8a853396b4199315ade0879922, type: 3}
       propertyPath: m_Name
-      value: AddPostButton
+      value: CreatePostButton
       objectReference: {fileID: 0}
     - target: {fileID: 7844258483406875934, guid: d380af8a853396b4199315ade0879922, type: 3}
       propertyPath: m_Pivot.x
@@ -330,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 23522962876862414, guid: d380af8a853396b4199315ade0879922, type: 3}
       propertyPath: m_fontSize
-      value: 43.85
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3547299248854205569, guid: d380af8a853396b4199315ade0879922, type: 3}
       propertyPath: m_Name
@@ -451,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 23522962876862414, guid: d380af8a853396b4199315ade0879922, type: 3}
       propertyPath: m_fontSize
-      value: 40.35
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3547299248854205569, guid: d380af8a853396b4199315ade0879922, type: 3}
       propertyPath: m_Name

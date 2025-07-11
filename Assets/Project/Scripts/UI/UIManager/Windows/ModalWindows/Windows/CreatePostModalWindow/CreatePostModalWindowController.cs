@@ -2,7 +2,6 @@ using JetBrains.Annotations;
 using PlaceHolderSDK;
 using UI.Abstracts;
 using UI.Attributes;
-using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI
@@ -27,6 +26,8 @@ namespace UI
         {
             _cancelButton.onClick.AddListener(Cancel);
             _acceptButton.onClick.AddListener(Send);
+            
+            _resultMessage.HideMessage();
         }
 
         protected override void OnClose()
@@ -39,14 +40,31 @@ namespace UI
         
         private void Send()
         {
-            PostCreateRequest post = new PostCreateRequest
+            _resultMessage.HideMessage();
+            
+            if(!int.TryParse(View.UserId.text, out int userId))
             {
-                UserId = int.Parse(View.UserId.text),
+                _resultMessage.ShowError();
+                return;
+            }
+                
+            var post = new PostCreateRequest
+            {
+                UserId = userId,
                 Title = View.Title.text,
                 Body = View.Body.text,
             };
             
-            _client.CreatePost(post);
+            try
+            {
+                _client.CreatePost(post);
+            }
+            catch 
+            {
+                _resultMessage.ShowError();
+                return;
+            }
+            
             _resultMessage.ShowSuccess();
         }
 

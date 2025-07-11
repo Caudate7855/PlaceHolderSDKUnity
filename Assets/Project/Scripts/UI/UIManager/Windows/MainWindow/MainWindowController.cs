@@ -14,7 +14,7 @@ namespace UI
         private Button _editPostButton;
         private Button _deletePostButton;
 
-        private IUIManager _uiManager = new UIManager.UIManager();
+        private readonly IUIManager _uiManager = new UIManager.UIManager();
 
         private CreatePostModalWindowController _createPostModalWindowController;
         private EditPostModalWindowController _editPostModalWindowController;
@@ -52,13 +52,13 @@ namespace UI
         private void OnEditPostButtonClick()
         {
             _editPostModalWindowController = _uiManager.Load<EditPostModalWindowController>();
-            _createPostModalWindowController.Open();
+            _editPostModalWindowController.Open();
         }
 
         private void OnDeletePostButtonClick()
         {
             _deletePostModalWindowController = _uiManager.Load<DeletePostModalWindowController>();
-            _createPostModalWindowController.Open();
+            _deletePostModalWindowController.Open();
         }
     }
 }
