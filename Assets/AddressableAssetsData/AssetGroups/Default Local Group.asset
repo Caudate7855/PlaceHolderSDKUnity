@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 4196bed0a25f54e42ab6dbea1b374bc9
   m_SerializeEntries:
   - m_GUID: 0769339d0957a854685227ddb4797317
-    m_Address: UI/PostsTableView
+    m_Address: UI/PostsTableWindow
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
