@@ -6,7 +6,7 @@ namespace UI.UIManager
     [UsedImplicitly]
     public class UIManager : IUIManager
     {
-        private List<object> _controllers = new List<object>();
+        private List<object> _controllers = new();
         
         public T Load<T>() where T : class
         {

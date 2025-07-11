@@ -1,13 +1,16 @@
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class UIAssetLoader
+namespace UI
 {
-    public async Task<T> Load<T>(string path)
+    public class UIAssetLoader
     {
-        var handle = await UnityEngine.AddressableAssets.Addressables.LoadAssetAsync<GameObject>(path).Task;
-        var result = handle.GetComponent<T>();
+        public async Task<T> Load<T>(string path)
+        {
+            var handle = await UnityEngine.AddressableAssets.Addressables.LoadAssetAsync<GameObject>(path).Task;
+            var result = handle.GetComponent<T>();
             
-        return result;
+            return result;
+        }
     }
 }

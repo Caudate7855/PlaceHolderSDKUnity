@@ -2,6 +2,6 @@ using UnityEngine;
 
 namespace UI.Abstracts
 {
-    [RequireComponent(typeof(UnityEngine.Canvas))]
+    [RequireComponent(typeof(Canvas))]
     public class UIManagerCanvasBase : MonoBehaviour { }
 }
