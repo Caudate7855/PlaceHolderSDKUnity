@@ -195,6 +195,7 @@ MonoBehaviour:
   _createPostButton: {fileID: 8539752980190285930}
   _editPostButton: {fileID: 5462657968585012474}
   _deletePostButton: {fileID: 1902007925128810348}
+  _postsTableView: {fileID: 0}
 --- !u!1001 &293532642629094456
 PrefabInstance:
   m_ObjectHideFlags: 0

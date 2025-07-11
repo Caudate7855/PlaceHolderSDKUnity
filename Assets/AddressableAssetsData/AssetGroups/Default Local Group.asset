@@ -17,6 +17,21 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 4196bed0a25f54e42ab6dbea1b374bc9
   m_SerializeEntries:
+  - m_GUID: 0769339d0957a854685227ddb4797317
+    m_Address: UI/PostsTableView
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 719ba3a00442afe43b30b019fc620aa3
+    m_Address: UI/EditPostModalWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ebaa7ad7a2275d43b731b356fd72269
+    m_Address: UI/DeletePostModalWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c99ba3457e0883840ab0b104062dec32
     m_Address: UI/MainWindow
     m_ReadOnly: 0

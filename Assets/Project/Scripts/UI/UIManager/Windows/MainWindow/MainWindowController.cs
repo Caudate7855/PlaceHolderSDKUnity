@@ -1,4 +1,6 @@
+using System.Threading.Tasks;
 using JetBrains.Annotations;
+using PlaceHolderSDK;
 using UI.Abstracts;
 using UI.Attributes;
 using UI.UIManager;
@@ -19,7 +21,10 @@ namespace UI
         private CreatePostModalWindowController _createPostModalWindowController;
         private EditPostModalWindowController _editPostModalWindowController;
         private DeletePostModalWindowController _deletePostModalWindowController;
-
+        private PostsTableController _postsTableController;
+        
+        private readonly PlaceholderClient _client =  new();
+        
         protected override void Initialize()
         {
             _getPostsButton = View.GetPostsButton;
@@ -40,7 +45,8 @@ namespace UI
 
         private void OnGetPostsButtonClick()
         {
-            
+            _postsTableController = _uiManager.Load<PostsTableController>();
+            _postsTableController.Open();
         }
 
         private void OnCreatePostButtonClick()
